@@ -1,0 +1,8 @@
+import type { Metadata } from "next";
+import { RoomsPage } from "@/views/rooms";
+
+export const metadata: Metadata = {
+  title: "Rooms & Reservation",
+};
+
+export default RoomsPage;
