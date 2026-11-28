@@ -1,0 +1,1 @@
+export { DiscoverGalle } from "./ui/discover-galle";

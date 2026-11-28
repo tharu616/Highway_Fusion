@@ -1,36 +1,53 @@
+import type { StaticImageData } from "next/image";
+import { images } from "@/shared/assets/images";
+
 export type Room = {
   id: string;
   name: string;
   description: string;
-  pricePerNight: number; // LKR
+  pricePerNight: number; // LKR / BB
   maxGuests: number;
-  features: string[];
+  beds: number;
+  baths: number;
+  wifi: boolean;
+  image: StaticImageData;
 };
 
-// TODO: replace with the real details from Grand Highway Resort
 export const rooms: Room[] = [
   {
     id: "double",
-    name: "Double Room",
-    description: "A cozy room for two with a comfortable bed and a calm view.",
-    pricePerNight: 15000,
+    name: "Deluxe Double Room",
+    description:
+      "Unparalleled comfort in our Double Room, featuring plush bedding and modern furnishings.",
+    pricePerNight: 9500,
     maxGuests: 2,
-    features: ["Air conditioning", "Free Wi-Fi", "Hot water"],
+    beds: 1,
+    baths: 1,
+    wifi: true,
+    image: images.rooms.double,
   },
   {
     id: "family",
     name: "Family Room",
-    description: "A spacious room for families, with extra beds and space.",
-    pricePerNight: 25000,
+    description:
+      "A family retreat in our Family Room, combining generous space, modern amenities.",
+    pricePerNight: 11000,
     maxGuests: 4,
-    features: ["Air conditioning", "Free Wi-Fi", "Extra beds"],
+    beds: 2,
+    baths: 1,
+    wifi: true,
+    image: images.rooms.family,
   },
   {
     id: "apartment",
-    name: "Apartment",
-    description: "A private apartment for longer stays, with extra living space.",
-    pricePerNight: 35000,
-    maxGuests: 6,
-    features: ["Air conditioning", "Free Wi-Fi", "Living area"],
+    name: "2B Apartment",
+    description:
+      "Indulge in elegance at our Grand Highway Resort Apartment, featuring contemporary design.",
+    pricePerNight: 16000,
+    maxGuests: 4,
+    beds: 2,
+    baths: 2,
+    wifi: true,
+    image: images.rooms.apartment,
   },
 ];

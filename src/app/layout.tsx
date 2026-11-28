@@ -1,26 +1,27 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Kaushan_Script } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { LenisProvider } from "@/shared/providers/lenis-provider";
 import { Toaster } from "@/shared/ui/sonner";
+import { ScrollProgress } from "@/shared/ui/scroll-progress";
 import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
 import { siteConfig } from "@/shared/config/site";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
+  display: "swap",
 });
-const kaushan = Kaushan_Script({
+const inter = Inter({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-kaushan",
+  variable: "--font-inter",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} | ${siteConfig.tagline}`,
+    default: `${siteConfig.name} | Grand Highway Resort, Galle`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -35,10 +36,11 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${inter.variable} ${playfair.variable} ${kaushan.variable}`}
+      className={`${playfair.variable} ${inter.variable}`}
     >
-      <body>
+      <body className="bg-cream text-navy font-sans antialiased">
         <LenisProvider>
+          <ScrollProgress />
           <Header />
           <main>{children}</main>
           <Footer />
