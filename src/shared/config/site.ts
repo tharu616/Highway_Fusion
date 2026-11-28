@@ -7,6 +7,9 @@ export const siteConfig = {
     "A luxurious sanctuary on Sri Lanka's southern coast, where warm hospitality meets fine dining.",
   phone: "+94 77 790 4010",
   phoneHref: "tel:+94777904010",
+  restaurantPhone: "070 790 4010",
+  restaurantPhoneHref: "tel:+94707904010",
+  restaurantLocation: "Pinnaduwa, Galle",
   email: "info@example.com", // TODO: real email
   addressLines: ["Grand Highway Resort, Galle", "Southern Province, Sri Lanka"], // TODO: full street address
   nav: [

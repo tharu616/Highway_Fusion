@@ -11,6 +11,8 @@ import serviceWeddings from "./services/weddings.webp";
 import serviceTours from "./services/tours.webp";
 import serviceEvents from "./services/events.webp";
 import serviceFutsal from "./services/futsal.webp";
+import offerLiveMusic from "./offers/live-music.webp";
+import offerBiteCombo from "./offers/bite-combo.webp";
 
 export const images = {
   hero,
@@ -29,5 +31,9 @@ export const images = {
     tours: serviceTours,
     events: serviceEvents,
     futsal: serviceFutsal,
+  },
+  offers: {
+    liveMusic: offerLiveMusic,
+    biteCombo: offerBiteCombo,
   },
 };

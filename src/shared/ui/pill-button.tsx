@@ -39,6 +39,14 @@ export function PillButton({
     className
   );
 
+  if (href.startsWith("tel:") || href.startsWith("mailto:")) {
+    return (
+      <a href={href} className={classes}>
+        {children}
+      </a>
+    );
+  }
+
   if (external) {
     return (
       <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
@@ -46,6 +54,7 @@ export function PillButton({
       </a>
     );
   }
+
   return (
     <Link href={href} className={classes}>
       {children}

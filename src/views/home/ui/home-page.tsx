@@ -4,6 +4,7 @@ import { WelcomeSection } from "@/widgets/welcome-section";
 import { StatsBand } from "@/widgets/stats-band";
 import { DiscoverGalle } from "@/widgets/discover-galle";
 import { FusionIntro } from "@/widgets/fusion-intro";
+import { OffersSection } from "@/widgets/offers-section";
 import { ServicesSection } from "@/widgets/services-section";
 import { RoomsSection } from "@/widgets/rooms-section";
 import { CtaBand } from "@/widgets/cta-band";
@@ -17,6 +18,7 @@ export function HomePage() {
       <StatsBand />
       <DiscoverGalle />
       <FusionIntro />
+      <OffersSection />
       <ServicesSection />
       <RoomsSection />
       <CtaBand />
